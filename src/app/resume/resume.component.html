@@ -1,14 +1,21 @@
 <div class="container px-5 my-5">
     <div class="text-center mb-5">
-        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Resume</span></h1>
+        <h1 class="display-5 fw-bolder mb-0">
+            <span class="text-gradient d-inline">
+                Resume
+                <a href="C:\Users\nfierro\Desktop\Portfolio Website\my-portfolio\src\assets\Resume-2022.pdf">
+                    <div class="d-inline-block bi bi-download me-2" download></div>
+                </a>
+            </span>
+        </h1>
+
     </div>
-    <!-- Download resume button-->
-    <!-- Note: Set the link href target to a PDF file within your project-->
-    <a class="btn btn-primary px-4 py-3" href="#!">
-        <div class="d-inline-block bi bi-download me-2"></div>
-        Download Resume
-    </a>
     <div class="row gx-5 justify-content-center">
+        <nav class="nav nav-pills flex-column flex-sm-row">
+            <a class="flex-sm-fill text-sm-center nav-link" routerLink="experience">Experience</a>
+            <a class="flex-sm-fill text-sm-center nav-link" routerLink="education">Education</a>
+            <a class="flex-sm-fill text-sm-center nav-link" routerLink="skills">Skills</a>
+        </nav>
         <router-outlet></router-outlet>
     </div>
 </div>
