@@ -2,32 +2,35 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { WelcomeComponent } from './welcome/welcome.component';
 import { ResumeComponent } from './resume/resume.component';
 import { ContactComponent } from './contact/contact.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { IntroComponent } from './intro/intro.component';
+import { AboutComponent } from './about/about.component';
+import { ProfileComponent } from './profile/profile.component';
+import { AppRoutingModule } from './app-routing.module';
+import { SkillsComponent } from './resume/skills.component';
+import { WorkExperienceComponent } from './resume/work-experience.component';
+import { EducationComponent } from './resume/education.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent,
-    ResumeComponent,
     ContactComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    IntroComponent,
+    AboutComponent,
+    ProfileComponent,
+    ResumeComponent,
+    SkillsComponent,
+    WorkExperienceComponent,
+    EducationComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot([
-      { path: 'welcome', component: WelcomeComponent },
-      //{ path: 'portfolio', component: PortfolioComponent },
-      { path: 'resume', component: ResumeComponent },
-      { path: 'contact', component: ContactComponent },
-      { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-      { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
-    ], { anchorScrolling: 'enabled' })
+    AppRoutingModule
   ],
   bootstrap: [AppComponent]
 })
