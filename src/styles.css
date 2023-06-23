@@ -13719,6 +13719,7 @@ html {
   .profile {
     height: 25vw;
     width: 25vw;
+    margin-top: 0vw;
   }
 
   .profile .profile-img {
